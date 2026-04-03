@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Aviyaan | Sukhanwar Registration Flow</title>
+  <meta name="description" content="Frontend-only premium event registration and ticket flow for Sukhanwar Open Mic." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="assets/golden-logo-aviyaan.png" type="image/x-icon">
+</head>
+<body>
+  <div class="bg-pattern"></div>
+
+  <header class="brand-header py-3">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+        <div class="brand-logo-box">
+          <img src="assets/image.png" alt="The Aviyaan Logo Placeholder" class="brand-logo" />
+        </div>
+        <div class="brand-logo-box">
+          <img src="assets/sukhanva-color-logo.png" alt="Sukhanwar Logo Placeholder" class="brand-logo" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pb-5">
+    <section id="section-landing" class="flow-section active-section">
+      <div class="container">
+        <div class="hero-card mx-auto">
+          <span class="hero-badge">Live Cultural Evening</span>
+          <h1 class="hero-title">Sukhanwar Open Mic</h1>
+          <p class="hero-tagline">Where words, wit, and voices meet an elegant stage.</p>
+          <p class="hero-intro mb-4">
+            Hosted by <strong>The Aviyaan</strong> in collaboration with <strong>Sukhanwar</strong>, this evening celebrates poetry, storytelling, and stand-up in a premium live setting.
+          </p>
+          <div class="event-meta-grid">
+            <div class="meta-item">
+              <h6>Date</h6>
+              <p>20 April 2026</p>
+            </div>
+            <div class="meta-item">
+              <h6>Time</h6>
+              <p>6:00 PM onwards</p>
+            </div>
+            <div class="meta-item">
+              <h6>Venue</h6>
+              <p>Lucknow</p>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button class="btn btn-brand btn-lg px-5" data-go="registration">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="featured-card mt-4 mx-auto">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-4">
+              <img src="https://placehold.co/600x400/EEE/31343C?font=oswald&text=Event+Banner" alt="Featured Event Placeholder" class="img-fluid featured-image" />
+            </div>
+            <div class="col-md-8">
+              <div class="p-4">
+                <h3 class="mb-2">Featured Evening Experience</h3>
+                <p class="mb-0">Curated performers, premium ambience, and a warm community of listeners. Register now to perform or join as an audience member.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-registration" class="flow-section">
+      <div class="container">
+        <div class="section-card mx-auto">
+          <div class="section-head">
+            <h2>Registration Form</h2>
+            <p>Fill your details to proceed to payment instructions.</p>
+          </div>
+
+          <form id="registrationForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required />
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label" for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" min="10" max="100" required />
+                <div class="invalid-feedback">Enter a valid age (10-100).</div>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label" for="gender">Gender</label>
+                <select id="gender" name="gender" class="form-select" required>
+                  <option value="">Select</option>
+                  <option>Female</option>
+                  <option>Male</option>
+                  <option>Other</option>
+                  <option>Prefer not to say</option>
+                </select>
+                <div class="invalid-feedback">Please select a gender.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="email">Email ID</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+                <div class="invalid-feedback">Please enter a valid email ID.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="socialId">Instagram ID / Facebook ID</label>
+                <input type="text" class="form-control" id="socialId" name="socialId" required />
+                <div class="invalid-feedback">Please enter your Instagram/Facebook ID.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="contactNumber">Contact Number</label>
+                <input type="tel" class="form-control" id="contactNumber" name="contactNumber" required />
+                <div class="invalid-feedback">Please enter a valid 10-digit contact number.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="heardFrom">Where did you hear about us?</label>
+                <input type="text" class="form-control" id="heardFrom" name="heardFrom" required />
+                <div class="invalid-feedback">Please fill this field.</div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="address">Address</label>
+                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                <div class="invalid-feedback">Please enter your address.</div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="performanceArea">Performance Area</label>
+                <select id="performanceArea" name="performanceArea" class="form-select" required>
+                  <option value="">Select Performance Area</option>
+                  <option>Poetry</option>
+                  <option>Storytelling</option>
+                  <option>Stand-up</option>
+                  <option>Audience</option>
+                </select>
+                <div class="invalid-feedback">Please choose a performance area.</div>
+              </div>
+            </div>
+
+            <div class="d-flex gap-2 justify-content-between mt-4 flex-wrap">
+              <button type="button" class="btn btn-outline-brand" data-go="landing">Back</button>
+              <button type="submit" class="btn btn-brand">Proceed to Payment</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-payment" class="flow-section">
+      <div class="container">
+        <div class="section-card mx-auto">
+          <div class="section-head">
+            <h2>Payment Instructions</h2>
+            <p>Complete payment via UPI and confirm for verification.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="summary-card h-100">
+                <h5 class="mb-3">Registration Summary</h5>
+                <ul class="summary-list" id="summaryList"></ul>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="summary-card h-100">
+                <h5 class="mb-3">UPI Payment</h5>
+                <p class="amount-tag">Amount Payable: INR 399</p>
+                <img src="https://placehold.co/600x400/EEE/31343C?font=oswald&text=QR+Code" alt="QR Code Placeholder" class="img-fluid qr-placeholder mb-3" />
+                <div class="upi-apps mb-3">
+                  <span>GPay</span>
+                  <span>PhonePe</span>
+                  <span>Paytm</span>
+                </div>
+                <p class="mb-2"><strong>UPI ID:</strong> aviyaan@sbi</p>
+                <p class="small-note mb-0">Ticket will be shared on your registered email and WhatsApp number after successful payment verification.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-2 justify-content-between mt-4 flex-wrap">
+            <button type="button" class="btn btn-outline-brand" data-go="registration">Back</button>
+            <button type="button" class="btn btn-brand" id="confirmPaymentBtn">I Have Completed Payment</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-success" class="flow-section">
+      <div class="container">
+        <div class="section-card success-card mx-auto text-center">
+          <div class="success-icon">✓</div>
+          <h2>Payment Request Submitted</h2>
+          <p class="mb-2">Your payment confirmation has been received successfully.</p>
+          <p class="mb-3">Your ticket will be shared on your registered email and WhatsApp number after verification.</p>
+          <p class="ref-line mb-4">Reference ID: <span id="referenceId">-</span></p>
+          <div class="d-flex gap-2 justify-content-center flex-wrap">
+            <button type="button" class="btn btn-outline-brand" data-go="payment">Back</button>
+            <button type="button" class="btn btn-brand" data-go="ticket">View Ticket</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-ticket" class="flow-section">
+      <div class="container">
+        <div class="section-card mx-auto">
+          <div class="section-head d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <div>
+              <h2 class="mb-1">Ticket Preview</h2>
+              <p class="mb-0">Show this pass at the venue entry gate.</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="button" class="btn btn-outline-brand" id="downloadTicketBtn">Download Ticket</button>
+              <button type="button" class="btn btn-brand" id="printTicketBtn">Print Ticket</button>
+            </div>
+          </div>
+
+          <article class="event-ticket" id="eventTicket">
+            <div class="ticket-header">
+              <div class="ticket-logos">
+                <img src="assets/golden-logo-aviyaan.png" alt="The Aviyaan Logo Placeholder" />
+                <img src="assets/sukhanva-color-logo.png" alt="Sukhanwar Logo Placeholder" />
+              </div>
+              <div>
+                <h3 class="mb-1">Sukhanwar Open Mic</h3>
+                <p class="mb-0">Premium Entry Pass</p>
+              </div>
+            </div>
+
+            <div class="ticket-body row g-3">
+              <div class="col-md-8">
+                <div class="ticket-info-grid">
+                  <div><strong>Event Date</strong><span>20 April 2026</span></div>
+                  <div><strong>Event Time</strong><span>6:00 PM onwards</span></div>
+                  <div><strong>Venue</strong><span>Lucknow</span></div>
+                  <div><strong>Serial No.</strong><span id="ticketSerial">-</span></div>
+                  <div><strong>Ticket No.</strong><span id="ticketNumber">-</span></div>
+                  <div><strong>Attendee</strong><span id="ticketName">-</span></div>
+                  <div><strong>Contact</strong><span id="ticketContact">-</span></div>
+                  <div><strong>Email</strong><span id="ticketEmail">-</span></div>
+                  <div><strong>Performance Area</strong><span id="ticketPerformance">-</span></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="ticket-qr-wrap">
+                  <img src="https://placehold.co/600x400/EEE/31343C?font=oswald&text=Ticket+QR" alt="Ticket QR Placeholder" class="img-fluid" />
+                  <small>Scan for entry validation desk</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="ticket-note">
+              <p class="mb-0">Terms: Please carry a valid ID proof. Entry subject to venue policy and organizer verification.</p>
+            </div>
+          </article>
+
+          <div class="d-flex justify-content-start mt-4">
+            <button type="button" class="btn btn-outline-brand" data-go="success">Back</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="brand-footer py-3">
+    <div class="container d-flex justify-content-between flex-wrap gap-2">
+      <small>© 2026 The Aviyaan x Sukhanwar</small>
+      <small>Design & Developed by <a href="https://lucifer01430.github.io/Portfolio">Harsh</a></small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
